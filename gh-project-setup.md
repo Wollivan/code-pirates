@@ -2,6 +2,14 @@
 
 All of the commands should be run in the terminal in the directory of your project
 
+### Brief aside, on ACP
+Whenever you want to push changes to your remote, you need to ACP:
+- Add `git add .`
+- Commit `git commit -m "Your message about the commit"`
+- Push `git push`
+
+##### More to come on here on ACP
+
 ## For Projects you already started
 
 ##### If you created your project using `create-react-app` then you can skip the first step, as it already did it for you
