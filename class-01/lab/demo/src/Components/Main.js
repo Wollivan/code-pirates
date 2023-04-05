@@ -4,9 +4,9 @@ function Main() {
   return (
     <main>
       <h2>These are my horned beasts</h2>
-      <HornedBeast />
-      <HornedBeast />
-      <HornedBeast />
+      <HornedBeast title="Unicorn" />
+      <HornedBeast title="Narwhal" />
+      <HornedBeast title="Smaug" />
     </main>
   );
 }
