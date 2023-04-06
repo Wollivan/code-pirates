@@ -1,0 +1,9 @@
+body {
+  font-family: monospace;
+  background-color: tomato;
+  color: white;
+}
+
+img {
+  max-width: 25%;
+}

@@ -14,6 +14,8 @@ function App() {
     <div className="App">
       <img onClick={handlePat} src={Paul} alt="" />
       <p>Pats on Pauls Poor Head: {pats}</p>
+      <p>{pats}</p>
+      <h2>{pats}</h2>
     </div>
   );
 }
