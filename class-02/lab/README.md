@@ -66,7 +66,7 @@ Then the number of "Favorites" displayed on that beast will increase by one.
 
 - Put a heart in each `HornedBeast` component with the number of "Favorites" next to it.
 
-### Feature 3: Bootstrap
+### Feature 3: Style and responsiveness
 
 #### Why are we implementing this feature?
 
@@ -79,10 +79,6 @@ Given that a user opens the application in the browser
 When the images are displayed on the screen
 Then each image should be rendered in a visually pleasing way: in columns, as screen width allows.
 ```
-
-#### How are we implementing it?
-
-- Bring in the `react-bootstrap` library and use it to style your application making sure that it is responsive.
 
 ### Stretch Goal: Add Interaction
 
