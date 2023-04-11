@@ -1,0 +1,17 @@
+body {
+  font-family: monospace;
+  margin: 0;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+}
+.dark {
+  background-color: rgb(37, 39, 39);
+  color: white;
+}
+
+.light {
+  background-color: tomato;
+}
