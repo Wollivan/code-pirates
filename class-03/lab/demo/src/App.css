@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: tomato;
+  color: white;
+  font-family: monospace;
+}
+
+img {
+  max-width: 100%;
+}
+
+.beasts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.beast {
+  width: 20%;
+}
