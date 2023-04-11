@@ -15,7 +15,7 @@ function App() {
   }
 
   return (
-    <div className={`App`}>
+    <div className={`App ${theme}`}>
       <Header handleMode={handleMode} />
       <Main theme={theme} />
     </div>
