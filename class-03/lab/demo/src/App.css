@@ -3,9 +3,24 @@
 }
 
 body {
-  background-color: tomato;
-  color: white;
   font-family: monospace;
+  margin: 0;
+}
+
+.App {
+  height: 100vh;
+  color: white;
+}
+
+.dark {
+  background-color: darkslategray;
+}
+.light {
+  background-color: tomato;
+}
+
+header {
+  padding: 1rem;
 }
 
 img {
