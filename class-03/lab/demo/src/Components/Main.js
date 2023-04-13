@@ -1,13 +1,12 @@
 import HornedBeast from "./HornedBeast";
 import beastData from "../data.json";
 
-function Main() {
+function Main({ handleModal }) {
   return (
     <main className="beasts">
-      {beastData.map((beast) => {
-        return <HornedBeast beast={beast} />;
+      {beastData.map(function (beast) {
+        return <HornedBeast beast={beast} handleModal={handleModal} />;
       })}
-      {/* <HornedBeast title="Tim's Dragon" imageUrl={petesDragon} description="Alive." /> */}
     </main>
   );
 }

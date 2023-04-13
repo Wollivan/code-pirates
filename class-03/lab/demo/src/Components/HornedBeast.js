@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function HornedBeast({ beast }) {
+function HornedBeast({ beast, handleModal }) {
   const [votes, setVotes] = useState(0);
 
   function handleVote() {
@@ -11,8 +11,8 @@ function HornedBeast({ beast }) {
     <div className="beast">
       <h2>{beast.title}</h2>
       <p>{beast.description}</p>
-      <img src={beast.image_url} alt={beast.title} onClick={handleVote} />
-      <p>Votes ❤️: {votes}</p>
+      <img src={beast.image_url} alt={beast.title} onClick={handleModal} />
+      <p onClick={handleVote}>Votes ❤️: {votes}</p>
     </div>
   );
 }
