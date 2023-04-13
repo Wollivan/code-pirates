@@ -11,7 +11,7 @@ function HornedBeast({ beast, handleModal }) {
     <div className="beast">
       <h2>{beast.title}</h2>
       <p>{beast.description}</p>
-      <img src={beast.image_url} alt={beast.title} onClick={handleModal} />
+      <img src={beast.image_url} alt={beast.title} onClick={() => handleModal(beast)} />
       <p onClick={handleVote}>Votes ❤️: {votes}</p>
     </div>
   );

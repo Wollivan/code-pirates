@@ -8,10 +8,11 @@ import { useState } from "react";
 function App() {
   const [theme, setTheme] = useState("light");
   const [modalShow, setModalShow] = useState(false);
-  // const [modalData, setModalData] = useState({})
+  const [modalData, setModalData] = useState({});
 
-  function handleModal() {
+  function handleModal(beast) {
     setModalShow(!modalShow);
+    setModalData(beast);
   }
 
   function handleMode() {
@@ -27,7 +28,7 @@ function App() {
       <Header handleMode={handleMode} />
       <Main handleModal={handleModal} />
       <Footer />
-      {modalShow && <Modal handleModal={handleModal} />}
+      {modalShow && <Modal modalData={modalData} handleModal={handleModal} />}
     </div>
   );
 }

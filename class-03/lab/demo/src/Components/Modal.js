@@ -1,7 +1,8 @@
-function Modal({ handleModal }) {
+function Modal({ modalData, handleModal }) {
   return (
     <div className="modal" onClick={handleModal}>
-      This is a modal
+      <h2>{modalData.title}</h2>
+      <img src={modalData.image_url} alt={modalData.title} />
     </div>
   );
 }
