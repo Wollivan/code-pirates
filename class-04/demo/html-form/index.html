@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: #008080;
+        color: white;
+        font-family: monospace;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML Form</h1>
+    <form id="cake-form">
+      <label for="cake">Cake</label>
+      <input name="cake" placeholder="What is your fave cake?" id="cake" />
+      <label for="quantity">Quantity</label>
+      <input name="quantity" placeholder="How many you want?!" id="quantity" />
+      <input type="submit" value="Submit this mutha!" />
+    </form>
+    <script>
+      const form = document.getElementById("cake-form");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const cake = event.target.cake.value;
+        const quantity = event.target.quantity.value;
+
+        localStorage.setItem("facts", "The person wants " + quantity + " " + cake + "s");
+        form.reset();
+      });
+    </script>
+  </body>
+</html>

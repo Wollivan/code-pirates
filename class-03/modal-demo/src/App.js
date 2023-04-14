@@ -12,7 +12,8 @@ function App() {
   return (
     <div className="App">
       <h1>This is my modal website</h1>
-      <button onClick={handleModal}>Trigger modal</button>
+      <button onClick={handleModal}>Set modal to Tim</button>
+      <button onClick={handleModal}>Set m,odal to Josh</button>
       {showModal && <Modal handleModal={handleModal} />}
     </div>
   );

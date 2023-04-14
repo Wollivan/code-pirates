@@ -1,9 +1,8 @@
-function Modal({ handleModal }) {
+function Modal({ handleModal, modalContents }) {
   return (
     <div className="modal">
       <p onClick={handleModal}>X</p>
-      <p>Hello there!</p>
-      <p>General Kenobi!</p>
+      <p>{modalContents}</p>
     </div>
   );
 }
