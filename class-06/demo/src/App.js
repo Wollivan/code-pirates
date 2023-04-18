@@ -8,7 +8,7 @@ function App() {
 
   async function getLocation() {
     const API =
-      "https://eu1.locationiq.com/v1/search.php?key=pk.465ce4e4e3d8b16f282a101841d45fa2&q=" + searchQuery + "&format=json";
+      "https://eu1.locationiq.com/v1/search.php?key=" + process.env.REACT_APP_API_KEY + "&q=" + searchQuery + "&format=json";
     const res = await axios.get(API);
     setLocation(res.data[0]);
   }
@@ -27,5 +27,3 @@ function App() {
 }
 
 export default App;
-
-//pk.465ce4e4e3d8b16f282a101841d45fa2
