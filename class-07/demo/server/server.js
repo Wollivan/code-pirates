@@ -33,28 +33,43 @@ const data = [
     name: "Metroid",
     year: 1986,
   },
+  {
+    name: "Dragon's Lair",
+    year: 1983,
+  },
+  {
+    name: "Dragon Quest VI",
+    year: 1995,
+  },
 ];
-
+// finds all the objects in our data array that matches the year provided
 function findGameByYear(year) {
-  const result = data.find(function (game) {
-    return game.year === year;
+  const result = data.filter(function (game) {
+    return game.year == year;
   });
   return result;
 }
 
 // create an endpoint
-app.get("/", (request, response) => {
+app.get("/", function (request, response) {
   response.json("You are looking at the root route of my server. How roude.");
 });
 
-app.get("/1983", (request, response) => {
-  const game = findGameByYear(1983);
-  response.json(game);
+// using request.query
+app.get("/games", function (request, response) {
+  // dataToReturn will be all of the data
+  let dataToReturn = data;
+  // UNLESS we provided year in the query, then only show the ones that match
+  if (request.query.year) {
+    dataToReturn = findGameByYear(request.query.year);
+  }
+  response.json(dataToReturn);
 });
 
-app.get("/1991", (request, response) => {
-  const game = findGameByYear(1991);
-  response.json(game);
+// using request.params
+app.get("/games/:year", (request, response) => {
+  const games = findGameByYear(request.params.year);
+  response.json(games);
 });
 
 app.listen(PORT, function () {
