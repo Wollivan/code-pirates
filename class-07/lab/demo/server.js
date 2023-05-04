@@ -34,6 +34,10 @@ app.get("/weather", function (request, response) {
     const description = day.weather.description;
 
     const fc = new Forecast(date, description);
+    
+    // if you prefer, instead of using a class, we can just create a new object like this:
+    // const fc = {date, description};
+    
     forecastArray.push(fc);
   });
 
