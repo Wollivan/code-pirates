@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 
 function App() {
+  // const [stateVariable, mutationFunction] = useState(initialValue);
   const [searchQuery, setSearchQuery] = useState("");
   const [location, setLocation] = useState({});
 
