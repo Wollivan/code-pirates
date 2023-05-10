@@ -8,14 +8,6 @@ app.use(cors());
 // get the data from the json file
 const weatherData = require("./data/weather.json");
 
-// Forecast class
-class Forecast {
-  constructor(date, description) {
-    this.date = date;
-    this.description = description;
-  }
-}
-
 app.get("/", function (request, response) {
   response.json("You are looking at my root route for the city exporer API");
 });
@@ -33,11 +25,8 @@ app.get("/weather", function (request, response) {
     const date = day.datetime;
     const description = day.weather.description;
 
-    const fc = new Forecast(date, description);
-    
-    // if you prefer, instead of using a class, we can just create a new object like this:
-    // const fc = {date, description};
-    
+    const fc = { date, description };
+
     forecastArray.push(fc);
   });
 
