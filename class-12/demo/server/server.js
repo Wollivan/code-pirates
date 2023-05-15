@@ -16,16 +16,26 @@ app.get("/", function (request, response) {
   response.json("You are looking at my root route, how roude!");
 });
 
+// localhost:8080/cats
+// request.query === {}
+
+// localhost:8080/cats?name=Bingo&colour=blue
+// request.query === { name: "Bingo", colour: "blue" }
+
 app.get("/cats", async function (request, response) {
   const cats = await Cat.find(request.query);
+  console.log("first");
   response.json(cats);
 });
 
 app.post("/cats", async function (request, response) {
+  console.log(request.body);
   const newCat = await Cat.create(request.body);
   response.json(newCat);
 });
 
+// localhost:8080/cats/123abc
+// request.params === { id: "123abc" }
 app.delete("/cats/:id", async function (request, response) {
   const deletedCat = await Cat.findByIdAndDelete(request.params.id);
   response.json(deletedCat);
