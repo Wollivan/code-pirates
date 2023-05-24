@@ -24,7 +24,6 @@ app.get("/", function (request, response) {
 
 app.get("/cats", async function (request, response) {
   const cats = await Cat.find(request.query);
-  console.log("first");
   response.json(cats);
 });
 
